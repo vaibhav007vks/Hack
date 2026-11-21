@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Library Seat Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <span>SL</span>
+            Smart Library
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#seats">Find Seats</a>
+            <a href="#booking">My Booking</a>
+        </nav>
+
+        <div class="profile">
+            Student
+        </div>
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main class="container" id="dashboard">
+
+        <section class="welcome">
+            <div>
+                <p class="small-heading">STUDENT DASHBOARD</p>
+                <h1>Find your perfect study seat.</h1>
+                <p class="description">
+                    Check live seat availability and find a comfortable
+                    place to study.
+                </p>
+            </div>
+
+            <div class="welcome-icon">📚</div>
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Seats</p>
+                <h2 id="totalSeats">150</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Available Seats</p>
+                <h2 id="availableSeats">--</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Occupied Seats</p>
+                <h2 id="occupiedSeats">--</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Seat Finder -->
+        <section class="seat-section" id="seats">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-heading">LIVE LIBRARY MAP</p>
+                    <h2>Find a Seat</h2>
+                </div>
+
+                <span class="live-status">
+                    ● Demo View
+                </span>
+            </div>
+
+
+            <!-- Floor Selection -->
+            <div class="floor-buttons">
+                <button class="floor-btn active" data-floor="1">Floor 1</button>
+                <button class="floor-btn" data-floor="2">Floor 2</button>
+                <button class="floor-btn" data-floor="3">Floor 3</button>
+                <button class="floor-btn" data-floor="4">Floor 4</button>
+            </div>
+
+
+            <!-- Seat Legend -->
+            <div class="legend">
+                <span><i class="available"></i> Available</span>
+                <span><i class="occupied"></i> Occupied</span>
+                <span><i class="selected"></i> Selected</span>
+            </div>
+
+
+            <!-- Seat Grid -->
+            <div class="seat-grid" id="seatGrid">
+                <!-- Seats are generated using JavaScript -->
+            </div>
+
+
+            <!-- Selected Seat Information -->
+            <div class="selection-panel">
+
+                <div>
+                    <p>Selected Seat</p>
+                    <h3 id="selectedSeat">None</h3>
+                </div>
+
+                <button id="bookButton" disabled>
+                    Book Selected Seat
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- My Booking -->
+
+        <section class="booking-section" id="booking">
+
+            <p class="small-heading">YOUR ACTIVITY</p>
+            <h2>My Booking</h2>
+
+            <div class="booking-card" id="bookingDetails">
+                <p>You haven't booked a seat yet.</p>
+            </div>
+
+            <button id="cancelButton" class="cancel-button" hidden>
+                Cancel Booking
+            </button>
+
+        </section>
+        
+<!-- QR CHECK-IN SECTION -->
+
+
+    <section class="qr-section" id="qrCheckin">
+
+        <p class="small-heading">SEAT VERIFICATION</p>
+        <h2>QR Code Check-in</h2>
+
+        <p id="checkinStatus">
+            Book a seat to generate your QR code.
+        </p>
+
+        <div id="qrCode"></div>
+
+        <button id="startScannerButton" disabled>
+            Start Camera Scanner
+        </button>
+
+        <div id="reader"></div>
+
+    </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>Smart Library Seat Finder | Student Project</p>
+        <p>Demo data for project demonstration</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
