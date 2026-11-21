@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: smart-library-seat-finder
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
